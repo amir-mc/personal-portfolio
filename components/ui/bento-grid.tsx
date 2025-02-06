@@ -1,5 +1,7 @@
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
+import { Globe } from "./globe";
+import { GlobeDemo } from "./globedemo";
 
 export const BentoGrid = ({
   className,
@@ -43,10 +45,13 @@ export const BentoGridItem = ({
   spareImg?: string;
   id: number;
 }) => {
+  const leftLists = ["ReactJS", "Express", "Typescript"];
+  const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
   return (
+
     <div
       className={cn( 
-        "row-span-1 rounded-xl relative group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4",
+        "row-span-1 overflow-hidden rounded-xl relative group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4",
         className
       )}
       style={{
@@ -54,10 +59,6 @@ export const BentoGridItem = ({
 backgroundColor: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,135,1) 66%, rgba(12,36,168,1) 100%)'
       }}
     >
-
-
-
-
 
 
       <div className={`${id === 6}&& 'flex justify-center h-full`}>
@@ -95,9 +96,45 @@ backgroundColor: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,135,1) 66%,
               </div>
               <div className="font-sans text-[#c1c2d3] font-bold text-lg lg:text-3xl max-w-96 z-10">
           {title}
-        </div>
+       
               </div>
+              {id===2 && (
+                <div className="absolute top-0 right-0">
+                 <h4>salam</h4>
+                </div>
+              )}
+
+{id === 3 && (
+            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
+              {/* tech stack lists */}
+              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+                {leftLists.map((item, i) => (
+                  <span
+                    key={i}
+                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
+                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                  >
+                    {item}
+                  </span>  
+                ))}
+                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+              </div>
+              <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
+                <span className="lg:py-4 lg:px-3 py-4 px-3  rounded-lg text-center bg-[#10132E]"></span>
+                {rightLists.map((item, i) => (
+                  <span
+                    key={i}
+                    className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
+                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
       </div>
+    </div>
     </div>
   );
 };
