@@ -1,7 +1,11 @@
+'use client'
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
 import { Globe } from "./globe";
 import { GlobeDemo } from "./globedemo";
+import Lottie from "lottie-react";
+import { useState } from "react";
+import ButtonsMagic from "./magic-buttons";
 
 export const BentoGrid = ({
   className,
@@ -45,13 +49,18 @@ export const BentoGridItem = ({
   spareImg?: string;
   id: number;
 }) => {
-  const leftLists = ["ReactJS", "Express", "Typescript"];
-  const rightLists = ["VueJS", "NuxtJS", "GraphQL"];
+  const [copied, setCopied] = useState(false);
+  const leftLists = ["ReactJS", "Nextjs", "Typescript"];
+  const rightLists = ["Typescript", "Nextjs", "ReactJS"];
+  const handleCopy = () => {
+    navigator.clipboard.writeText('https://github.com/amir-mc')
+    setCopied(true)
+  }
   return (
 
     <div
       className={cn( 
-        "row-span-1 overflow-hidden rounded-xl relative group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none p-4 dark:bg-black dark:border-white/[0.2] bg-white border border-transparent justify-between flex flex-col space-y-4",
+        "row-span-1 overflow-hidden rounded-xl relative group/bento hover:shadow-xl transition duration-200 shadow-input dark:shadow-none dark:border-white/[0.1] bg-white border border-transparent justify-between flex flex-col space-y-4",
         className
       )}
       style={{
@@ -61,7 +70,7 @@ backgroundColor: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,135,1) 66%,
     >
 
 
-      <div className={`${id === 6}&& 'flex justify-center h-full`}>
+      <div className={`${id === 6 && 'flex justify-center'} h-full`}>
                 <div className="w-full h-full absolute">
                    {img && 
                      <img src={img} alt={img} className={cn(imgClassName,'object-cover object-center')}/>
@@ -130,7 +139,23 @@ backgroundColor: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,135,1) 66%,
                     {item}
                   </span>
                 ))}
+
               </div>
+            </div>
+          )}
+          {id === 6 && (
+            <div className="mt-5 relative">
+              <div className={`absolute -bottom-5 right-0`}>
+                <Lottie options={{
+                  loop: copied,
+                  autoplay: copied,
+                  rendererSettings: {
+                    preserveAspectRatio: 'xMidYMid slice'
+                  }
+                 
+                }} />
+                </div>
+                <ButtonsMagic title={copied ? 'Copied' : 'Copy' } handleClick={handleCopy} />
             </div>
           )}
       </div>
