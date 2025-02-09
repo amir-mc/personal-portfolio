@@ -1,6 +1,7 @@
 
 import Grid from "@/components/grid";
 import Hero from "@/components/hero";
+import ResentProject from "@/components/resentporoject";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 
 import Image from "next/image";
@@ -20,7 +21,7 @@ export default function Home() {
       />
       <Hero />
         <Grid/>
-
+        <ResentProject/>
     </div>
          
     </main>

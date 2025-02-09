@@ -3,9 +3,10 @@ import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
 import { Globe } from "./globe";
 import { GlobeDemo } from "./globedemo";
-import Lottie from "lottie-react";
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 import { useState } from "react";
 import ButtonsMagic from "./magic-buttons";
+import dynamic from "next/dynamic";
 
 export const BentoGrid = ({
   className,
