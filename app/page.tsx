@@ -3,6 +3,7 @@ import Grid from "@/components/grid";
 import Hero from "@/components/hero";
 import ResentProject from "@/components/resentporoject";
 import { FloatingNav } from "@/components/ui/floating-navbar";
+import { navItems } from "@/data/data";
 
 import Image from "next/image";
 
@@ -13,11 +14,7 @@ export default function Home() {
    items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
     <div className="max-w-7xl w-full ">
       <FloatingNav
-        navItems={[
-          { name: "Home", link: "/" },
-          { name: "About", link: "/about" },
-          { name: "Contact", link: "/contact" },
-        ]}
+        navItems={navItems}
       />
       <Hero />
         <Grid/>
