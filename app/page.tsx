@@ -1,4 +1,5 @@
 
+import ContactUs from "@/components/contactus";
 import Grid from "@/components/grid";
 import Hero from "@/components/hero";
 import ResentProject from "@/components/resentporoject";
@@ -21,6 +22,7 @@ export default function Home() {
         <Grid/>
         <ResentProject/>
         <WorkExprience/>
+        <ContactUs/>
     </div>
          
     </main>
