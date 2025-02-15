@@ -1,3 +1,5 @@
+import { address } from "motion/react-client";
+
 export const navItems = [
     { name: "About", link: "#about" },
     { name: "Projects", link: "#projects" },
@@ -205,13 +207,16 @@ export const navItems = [
     {
       id: 1,
       img: "/git.svg",
+      address:'https://github.com/amir-mc'
     },
     {
       id: 2,
       img: "/twit.svg",
+        address:'https://x.com/home'
     },
     {
       id: 3,
       img: "/link.svg",
+        address:'https://linkedin.com/in/amir-fooladi-ab9866269'
     },
   ];
