@@ -12,9 +12,9 @@ const ResentProject = () => {
                 </h1>
                 <div className=" flex flex-wrap items-center justify-center p-4 mt-10 gap-16  text-white">  
                     {projects.map((item)=>(
-                        <div key={item.id} className="lg:min-h-[32.5rem] h-[25rem] mr-10 ml-10 mt-5 mb-5 flex item-center justify-center sm:w-96 w-[80wv]">
+                        <div key={item.id} className="lg:min-h-[32.5rem] h-[25rem] mr-10 ml-10 mt-2 mb-2 flex item-center justify-center sm:w-96 w-[80wv]">
                            
-                           <ThreeDCardDemo img={item.img} title={item.title} des={item.des}/>
+                           <ThreeDCardDemo link={item.link} img={item.img} title={item.title} des={item.des}/>
                         </div>
                     ))}
                 </div>

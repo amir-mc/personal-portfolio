@@ -19,18 +19,18 @@ const Hero = () => {
       <div className="felx justify-center relative my-20">
         <div className="max-w-[89vw] md:max-w-2xl lg:max-w-[60vw] flex flex-col items-center justify-center">
             <h2 className="text-gray-400 tracking-wider text-4xl md:text-5xl lg:text-6xl font-bold text-center">
-                web page
+               Amir Fooladi
                 </h2>
     
 
         
         <TextGenerateEffect 
-        words="web page"
+        words="Developer"
         className="text-5xl dark text-center justify-center rounded-full md:text-5xl lg:text-6xl font-bold  " 
         duration={0.5}    
         />
         <p className="text-center text-gray-400 mb-3" >
-            Hi, I'm amir, i'm a react,next,typescript,and tailwind css developer
+            Hi, I'm amir, i'm a React JS , Next JS , Typescript and tailwind css developer
         </p>
         <a href="#about">
              <ButtonsMagic

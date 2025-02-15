@@ -52,7 +52,7 @@ export const BentoGridItem = ({
 }) => {
   const [copied, setCopied] = useState(false);
   const leftLists = ["ReactJS", "Nextjs", "Typescript"];
-  const rightLists = ["Typescript", "Nextjs", "ReactJS"];
+  const rightLists = ["ReactJS", "NodeJS ", "ReactJS"];
   const handleCopy = () => {
     navigator.clipboard.writeText('https://github.com/amir-mc')
     setCopied(true)
@@ -110,7 +110,7 @@ backgroundColor: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,135,1) 66%,
               </div>
               {id===2 && (
                 <div className="absolute top-0 right-0">
-                 <h4>salam</h4>
+                  
                 </div>
               )}
 
@@ -122,7 +122,7 @@ backgroundColor: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,135,1) 66%,
                   <span
                     key={i}
                     className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    lg:opacity-100 rounded-lg text-center text-white-100 bg-[#10132E]"
                   >
                     {item}
                   </span>  
@@ -135,7 +135,7 @@ backgroundColor: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,135,1) 66%,
                   <span
                     key={i}
                     className="lg:py-4 lg:px-3 py-2 px-3 text-xs lg:text-base opacity-50 
-                    lg:opacity-100 rounded-lg text-center bg-[#10132E]"
+                    lg:opacity-100 rounded-lg text-center text-white-200 bg-[#10132E]"
                   >
                     {item}
                   </span>
@@ -156,7 +156,7 @@ backgroundColor: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(4,0,135,1) 66%,
                  
                 }} />
                 </div>
-                <ButtonsMagic title={copied ? 'Copied' : 'Copy' } handleClick={handleCopy} />
+                <ButtonsMagic title={copied ? 'Copied' : 'Copy my E-mail address' } handleClick={handleCopy} />
             </div>
           )}
       </div>
