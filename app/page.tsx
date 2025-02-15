@@ -1,4 +1,5 @@
 
+import ContactPage from "@/components/contactus";
 import ContactUs from "@/components/contactus";
 import Footer from "@/components/footer";
 import Grid from "@/components/grid";
@@ -23,7 +24,7 @@ export default function Home() {
         <Grid/>
         <ResentProject/>
         <WorkExprience/>
-        <ContactUs/>
+        <ContactPage/>
         <Footer/>
     </div>
          
