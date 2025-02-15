@@ -30,7 +30,7 @@ const Hero = () => {
         duration={0.5}    
         />
         <p className="text-center text-gray-400 mb-3" >
-            Hi, I'm amir, i'm a React JS , Next JS , Typescript and tailwind css developer
+            Hi, I&apos;m amir, i use a React JS , Next JS , Typescript and tailwind css 
         </p>
         <a href="#about">
              <ButtonsMagic

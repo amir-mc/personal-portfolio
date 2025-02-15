@@ -1,4 +1,5 @@
 import { socialMedia } from "@/data/data";
+import Image from "next/image";
 
 const Footer = () => {
     return ( 
@@ -14,7 +15,7 @@ const Footer = () => {
                             <div className="w-10 h-10 cursor-pointer flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black rounded-lg border border-white-200"
                              key={items.id}>
                                 <a href={items.address}>
-                                    <img
+                                    <Image
                                     src={items.img}
                                     alt='pro'
                                     
